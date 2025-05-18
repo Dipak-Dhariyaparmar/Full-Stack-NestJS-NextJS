@@ -11,13 +11,17 @@ export default function Sidebar() {
       <div>
         <ul className="flex flex-col gap-4 px-4">
           <li>
-            <Link className="text-white font-bold" href={'/about'}>Home</Link>
+            <Link className="text-white font-bold" href={"/about"}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link className="text-white font-bold" href={'/about'}>About</Link>
+            <Link className="text-white font-bold" href={"/about"}>
+              About
+            </Link>
           </li>
         </ul>
       </div>
     </>
-  )
+  );
 }

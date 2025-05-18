@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { closeModal, openModal, toggleModal } from "@/redux/slice";
 import { useDispatch } from "react-redux";
@@ -12,21 +12,21 @@ export default function Header({ isLoggedIn }) {
 
   const handleModal = (payload) => {
     dispatch(toggleModal(payload));
-  }
+  };
 
   const handleLogOut = async () => {
-    const response = await postRequest('auth/logout', {});
+    const response = await postRequest("auth/logout", {});
 
     if (response.statusCode == 200) {
-      console.log('LOGED OUT');
+      console.log("LOGED OUT");
       console.log(response);
-      router.push('/')
+      router.push("/");
       //dispatch(toggleModal('SIGN_IN'));
     } else {
-      console.log('ERROR LOGED IN');
+      console.log("ERROR LOGED IN");
       console.log(response);
     }
-  }
+  };
 
   return (
     <>
@@ -58,24 +58,35 @@ export default function Header({ isLoggedIn }) {
           </div>
 
           <div className="flex-1 flex flex-row justify-end">
-            {isLoggedIn ? (<>
-              <div className="rounded cursor-pointer uppercase h-8 text-sm bg-slate-400 w-24 text-white font-semibold flex flex-wrap justify-center content-center mr-4" onClick={() => handleLogOut()}>
-                LogOut
-              </div>
-            </>) : (<>
-              <Link href={'/signin'}>
-                <div className="rounded  cursor-pointer uppercase h-8 text-sm bg-slate-400 w-24 text-white font-semibold flex flex-wrap justify-center content-center mr-4">
-                  Signin
+            {isLoggedIn ? (
+              <>
+                <div
+                  className="rounded cursor-pointer uppercase h-8 text-sm bg-slate-400 w-24 text-white font-semibold flex flex-wrap justify-center content-center mr-4"
+                  onClick={() => handleLogOut()}
+                >
+                  LogOut
                 </div>
-              </Link>
-              <Link href={'/signup'}>
-                <div className="rounded cursor-pointer uppercase h-8 text-sm bg-slate-400 w-24 text-white font-semibold flex flex-wrap justify-center content-center mr-4" onClick={() => handleModal('SIGN_UP')}>
-                  Signup
-                </div></Link></>)}
-
+              </>
+            ) : (
+              <>
+                <Link href={"/signin"}>
+                  <div className="rounded  cursor-pointer uppercase h-8 text-sm bg-slate-400 w-24 text-white font-semibold flex flex-wrap justify-center content-center mr-4">
+                    Signin
+                  </div>
+                </Link>
+                <Link href={"/signup"}>
+                  <div
+                    className="rounded cursor-pointer uppercase h-8 text-sm bg-slate-400 w-24 text-white font-semibold flex flex-wrap justify-center content-center mr-4"
+                    onClick={() => handleModal("SIGN_UP")}
+                  >
+                    Signup
+                  </div>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </header>
     </>
-  )
+  );
 }
