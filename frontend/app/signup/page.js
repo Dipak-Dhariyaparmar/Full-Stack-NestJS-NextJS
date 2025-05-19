@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { toggleModal } from "@/redux/slice";
 import { postRequest } from "@/utils/api";
 import React, { useState } from "react";
@@ -7,26 +7,26 @@ import { useDispatch } from "react-redux";
 export default function Signup() {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-    email: ''
+    username: "",
+    password: "",
+    email: "",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
 
-    const response = await postRequest('v1/users', formData)
+    const response = await postRequest("v1/users", formData);
 
     if (response) {
       console.log(response);
-      dispatch(toggleModal('SIGN_UP'));
+      dispatch(toggleModal("SIGN_UP"));
       if (response.statusCode == 400) {
-        alert(response.error[0])
+        alert(response.error[0]);
       }
     } else {
       console.log(response);
-      dispatch(toggleModal('SIGN_UP'));
+      dispatch(toggleModal("SIGN_UP"));
     }
   };
 
@@ -40,10 +40,16 @@ export default function Signup() {
 
   return (
     <>
-      <div style={{ height: '90vh', width: '95vw' }} className="flex flex-wrap justify-center content-center">
+      <div
+        style={{ height: "90vh", width: "95vw" }}
+        className="flex flex-wrap justify-center content-center"
+      >
         <form className="w-96" onSubmit={handleSubmit}>
           <h1 className="text-2xl font-bold text-center mb-4">SIGN UP</h1>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-600">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-600"
+          >
             Username
           </label>
           <input
@@ -51,10 +57,14 @@ export default function Signup() {
             id="username"
             name="username"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            value={formData.username} onChange={handleChange}
+            value={formData.username}
+            onChange={handleChange}
           />
 
-          <label htmlFor="first_name" className="block text-sm font-medium text-gray-600">
+          <label
+            htmlFor="first_name"
+            className="block text-sm font-medium text-gray-600"
+          >
             First Name
           </label>
           <input
@@ -62,10 +72,14 @@ export default function Signup() {
             id="first_name"
             name="first_name"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            value={formData.first_name} onChange={handleChange}
+            value={formData.first_name}
+            onChange={handleChange}
           />
 
-          <label htmlFor="last_name" className="block text-sm font-medium text-gray-600">
+          <label
+            htmlFor="last_name"
+            className="block text-sm font-medium text-gray-600"
+          >
             Last Name
           </label>
           <input
@@ -73,10 +87,14 @@ export default function Signup() {
             id="last_name"
             name="last_name"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            value={formData.last_name} onChange={handleChange}
+            value={formData.last_name}
+            onChange={handleChange}
           />
 
-          <label htmlFor="email" className="block mt-4 text-sm font-medium text-gray-600">
+          <label
+            htmlFor="email"
+            className="block mt-4 text-sm font-medium text-gray-600"
+          >
             Email
           </label>
           <input
@@ -84,10 +102,14 @@ export default function Signup() {
             id="email"
             name="email"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            value={formData.email} onChange={handleChange}
+            value={formData.email}
+            onChange={handleChange}
           />
 
-          <label htmlFor="password" className="block mt-4 text-sm font-medium text-gray-600">
+          <label
+            htmlFor="password"
+            className="block mt-4 text-sm font-medium text-gray-600"
+          >
             Password
           </label>
           <input
@@ -95,7 +117,8 @@ export default function Signup() {
             id="password"
             name="password"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            value={formData.password} onChange={handleChange}
+            value={formData.password}
+            onChange={handleChange}
           />
           <button
             type="submit"
@@ -106,5 +129,5 @@ export default function Signup() {
         </form>
       </div>
     </>
-  )
-} 
+  );
+}

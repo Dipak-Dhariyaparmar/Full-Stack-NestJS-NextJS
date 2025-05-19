@@ -1,31 +1,31 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { postRequest } from "@/utils/api";
 import { useDispatch } from "react-redux";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import { toggleModal } from "@/redux/slice";
 
 export default function SignIn() {
   const dispatch = useDispatch();
   const router = useRouter();
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
 
-    const response = await postRequest('auth/login', formData);
+    const response = await postRequest("auth/login", formData);
 
     if (response.statusCode == 200) {
-      console.log('LOGED IN');
+      console.log("LOGED IN");
       console.log(response);
-      alert('successfully signed in');
-      router.push('/');
+      alert("successfully signed in");
+      router.push("/");
     } else {
-      console.log('ERROR LOGED IN');
+      console.log("ERROR LOGED IN");
       console.log(response);
     }
   };
@@ -40,11 +40,17 @@ export default function SignIn() {
 
   return (
     <>
-      <div style={{ height: '90vh', width: '95vw' }} className="flex flex-wrap content-center justify-center">
+      <div
+        style={{ height: "90vh", width: "95vw" }}
+        className="flex flex-wrap content-center justify-center"
+      >
         <form className="w-96" onSubmit={handleSubmit}>
           <h1 className="text-2xl font-bold text-center mb-4">SIGN IN</h1>
 
-          <label htmlFor="email" className="block mt-4 text-sm font-medium text-gray-600">
+          <label
+            htmlFor="email"
+            className="block mt-4 text-sm font-medium text-gray-600"
+          >
             Username
           </label>
           <input
@@ -52,10 +58,14 @@ export default function SignIn() {
             id="email"
             name="email"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            value={formData.email} onChange={handleChange}
+            value={formData.email}
+            onChange={handleChange}
           />
 
-          <label htmlFor="password" className="block mt-4 text-sm font-medium text-gray-600">
+          <label
+            htmlFor="password"
+            className="block mt-4 text-sm font-medium text-gray-600"
+          >
             Password
           </label>
           <input
@@ -63,7 +73,8 @@ export default function SignIn() {
             id="password"
             name="password"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            value={formData.password} onChange={handleChange}
+            value={formData.password}
+            onChange={handleChange}
           />
           <button
             type="submit"
@@ -74,5 +85,5 @@ export default function SignIn() {
         </form>
       </div>
     </>
-  )
-} 
+  );
+}
