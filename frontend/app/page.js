@@ -22,14 +22,6 @@ export default function Home() {
               a strong focus on authentication, it ensures robust security
               measures for a reliable and protected online environment."
             </p>
-            {/* <div className="flex justify-center">
-              <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                Button
-              </button>
-              <button className="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">
-                Button
-              </button>
-            </div> */}
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <img
@@ -77,20 +69,6 @@ export default function Home() {
                     ensuring fast and efficient page loads for an enhanced user
                     experience.
                   </p>
-                  {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
-                    Learn More
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      className="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a> */}
                 </div>
               </div>
             </div>

@@ -12,7 +12,7 @@ export default async function Profile() {
   if (data.statusCode == 200) {
     user = data.data;
   } else {
-    // alert('Error in user data fetching');
+    // alert('Error in user data fetching ');
     console.log("Error in user data fetching");
   }
   return (
