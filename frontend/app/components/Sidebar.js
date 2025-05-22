@@ -25,3 +25,5 @@ export default function Sidebar() {
     </>
   );
 }
+
+// this is a simple sidebar component for a Next.js application.

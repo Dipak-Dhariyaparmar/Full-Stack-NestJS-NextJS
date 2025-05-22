@@ -87,3 +87,5 @@ export default function SignIn() {
     </>
   );
 }
+
+// this is a simple sign in page for a Next.js application.

@@ -21,7 +21,6 @@ export default function Header({ isLoggedIn }) {
       console.log("LOGED OUT");
       console.log(response);
       router.push("/");
-      //dispatch(toggleModal('SIGN_IN'));
     } else {
       console.log("ERROR LOGED IN");
       console.log(response);
@@ -90,3 +89,5 @@ export default function Header({ isLoggedIn }) {
     </>
   );
 }
+
+//this component is used to show the header of the application
