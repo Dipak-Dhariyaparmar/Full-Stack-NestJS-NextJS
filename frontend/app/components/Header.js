@@ -89,5 +89,3 @@ export default function Header({ isLoggedIn }) {
     </>
   );
 }
-
-//this component is used to show the header of the application

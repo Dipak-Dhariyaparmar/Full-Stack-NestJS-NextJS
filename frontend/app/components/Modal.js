@@ -18,5 +18,3 @@ const ModalComponent = ({ children, title, closeModal }) => {
 };
 
 export default ModalComponent;
-
-// this is a simple modal component for a Next.js application.
