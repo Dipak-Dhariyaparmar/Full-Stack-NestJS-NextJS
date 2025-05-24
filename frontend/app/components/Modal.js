@@ -18,3 +18,6 @@ const ModalComponent = ({ children, title, closeModal }) => {
 };
 
 export default ModalComponent;
+
+// this is a modal component
+// it is used to show the modal
