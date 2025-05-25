@@ -53,3 +53,5 @@ export class LoggerService {
     this.logger.info(message, { correlationId, filename, method,url, functionName});
   }
 }
+
+// this is a logger service component 
