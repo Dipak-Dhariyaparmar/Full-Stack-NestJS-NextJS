@@ -25,5 +25,3 @@ export default function Sidebar() {
     </>
   );
 }
-
-// this is a sidebar component

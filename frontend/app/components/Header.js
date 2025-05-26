@@ -89,5 +89,3 @@ export default function Header({ isLoggedIn }) {
     </>
   );
 }
-
-// this is a header component
