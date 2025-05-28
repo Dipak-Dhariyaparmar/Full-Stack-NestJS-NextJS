@@ -89,8 +89,3 @@ export default function Header({ isLoggedIn }) {
     </>
   );
 }
-
-// This is a header component for a Next.js application.
-
-// It includes navigation links, a logo, and buttons for signing in or signing up.
-// The component uses Redux for state management and handles user authentication.

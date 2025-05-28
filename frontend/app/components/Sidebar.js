@@ -25,6 +25,3 @@ export default function Sidebar() {
     </>
   );
 }
-
-// This is a simple sidebar component for a Next.js application.
-// It includes a header with a link to the home page and a list of navigation links.

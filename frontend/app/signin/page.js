@@ -87,6 +87,3 @@ export default function SignIn() {
     </>
   );
 }
-
-// This code defines a SignIn component that allows users to log in by entering their email and password.
-// It uses React hooks for state management and Next.js for routing.

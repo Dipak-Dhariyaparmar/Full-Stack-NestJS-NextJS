@@ -44,7 +44,3 @@ export function ModalManager() {
     </>
   );
 }
-
-// This component manages the display of modals for signing in and signing up.
-// It uses Redux to control the visibility of the modals and renders them conditionally based on the state.
-// The `ModalComponent` is used to render the modals with a title and a close button.

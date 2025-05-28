@@ -18,7 +18,3 @@ const ModalComponent = ({ children, title, closeModal }) => {
 };
 
 export default ModalComponent;
-
-// This component can be used to create a modal dialog in a React application.
-// It accepts children to render inside the modal, a title for the modal, and a function to close the modal.
-// The modal is styled with Tailwind CSS classes for a clean and modern look.
