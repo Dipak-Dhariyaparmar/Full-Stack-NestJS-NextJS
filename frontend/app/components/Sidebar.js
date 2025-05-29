@@ -25,3 +25,5 @@ export default function Sidebar() {
     </>
   );
 }
+// This code defines a simple sidebar component in React using Next.js. It includes a header with a link to the home page and two navigation links: one to the home page and another to the about page. The sidebar is styled with Tailwind CSS classes for layout and appearance.
+// The component uses the `Link` component from Next.js for client-side navigation, ensuring smooth transitions between pages without full page reloads.
