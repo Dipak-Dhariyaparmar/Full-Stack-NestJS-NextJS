@@ -18,6 +18,3 @@ const ModalComponent = ({ children, title, closeModal }) => {
 };
 
 export default ModalComponent;
-
-// This code defines a reusable modal component in React. It accepts `children` to render inside the modal, a `title` for the modal header, and a `closeModal` function to handle closing the modal. The modal is styled with Tailwind CSS classes for layout and appearance.
-// this component can be used in different parts of the application to display modal dialogs.

@@ -87,7 +87,3 @@ export default function SignIn() {
     </>
   );
 }
-
-// this page is used to sign in the user
-// it uses the postRequest function to send a request to the server
-// it uses the useDispatch hook to dispatch actions to the redux store

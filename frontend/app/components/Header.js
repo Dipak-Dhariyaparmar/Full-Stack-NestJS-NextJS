@@ -89,3 +89,8 @@ export default function Header({ isLoggedIn }) {
     </>
   );
 }
+
+// this component is used to render the header of the application
+// it contains the navigation links and the login/logout buttons
+// it also handles the modal for signup
+// it uses the useDispatch hook from react-redux to dispatch actions to the store
